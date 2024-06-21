@@ -79,8 +79,8 @@ class MailService{
                             text-align: center;
                         }
                         img{
-                            width: 30px;
-                            height: 30px;
+                            width: 100%;
+                           
                         }
                         
                         @media screen and (max-width: 768px) {

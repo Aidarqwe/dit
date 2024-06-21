@@ -6,7 +6,8 @@ async function createConnection() {
 			host: process.env.DBHost,
 			user: process.env.DBUser,
 			password: process.env.DBPassword,
-			database: "dit",
+			database: "a0940851_dit",
+			// database: "dit",
 			port: process.env.DBPort,
 		});
 		console.log('Подключение к базе данных успешно');

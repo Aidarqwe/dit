@@ -50,6 +50,9 @@ class MailService{
                             padding: 10px;
                             text-align: center;
                         }
+                        .image{
+                            width: 100%;
+                        }
                         .content {
                             margin: 20px 0;
                         }

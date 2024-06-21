@@ -2,9 +2,11 @@ const Router = require("express").Router;
 const userController = require("../controllers/user-controller");
 const transactionController = require("../controllers/transaction-controller");
 const dataController = require("../controllers/data-controller");
+const serviceController = require('../controllers/service-controller');
 const router = new Router();
 const {body} = require("express-validator");
 const authMiddleware = require("../middlewares/auth-middleware");
+const upload = require("../middlewares/file-middleware");
 
 
 router.post("/registration",
@@ -30,6 +32,7 @@ router.post("/changePassword",
 	userController.changePassword);
 
 router.post("/transactions", authMiddleware, transactionController.getTransactions);
+router.post("/createOrder",  upload.single("file"), serviceController.createService); // обрабатывает весь data, а надо чтобы только file
 
 router.get("/services", dataController.getService);
 router.get("/products", dataController.getProduct);
